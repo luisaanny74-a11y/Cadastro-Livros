@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Acervo{% endblock %}
+{% block content %}
+<section class="page-heading page-heading-inline"><div><p class="eyebrow">Acervo</p><h1>Livros cadastrados</h1><p>{{ livros|length }} obras disponíveis para consulta.</p></div><div class="acervo-actions"><button class="manage-toggle" type="button" aria-pressed="false">Gerenciar acervo</button><a class="button" href="{{ url_for('formulario_cadastro') }}">Cadastrar livro</a></div></section>
+{% if cadastrado %}<div class="alert alert-success" role="status">Livro cadastrado com sucesso.</div>{% endif %}
+{% if request.args.get('excluido') %}<div class="alert alert-success" role="status">Livro excluído com sucesso.</div>{% endif %}
+{% if request.args.get('erro') %}<div class="alert alert-error" role="alert">O registro não foi encontrado.</div>{% endif %}
+<div class="table-wrapper"><table><thead><tr><th>Título</th><th>Autor</th><th>Ano</th><th>Categoria</th><th class="manage-column">Ações</th></tr></thead><tbody>{% for livro in livros %}<tr><td>{{ livro.titulo }}</td><td>{{ livro.autor }}</td><td>{{ livro.ano }}</td><td>{{ livro.categoria }}</td><td class="manage-column"><form action="{{ url_for('excluir_livro', livro_id=livro.id) }}" method="post" onsubmit="return confirm('Deseja excluir o livro {{ livro.titulo }}?');"><button class="delete-button" type="submit">Excluir</button></form></td></tr>{% endfor %}</tbody></table></div>
+{% endblock %}

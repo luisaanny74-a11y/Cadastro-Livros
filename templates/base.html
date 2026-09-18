@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de gerenciamento de livros">
+    <title>{% block title %}Biblioteca{% endblock %} | Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>if (localStorage.getItem('tema') === 'escuro') document.documentElement.dataset.tema = 'escuro';</script>
+</head>
+<body>
+    <header class="site-header"><div class="header-content">
+        <a class="brand" href="{{ url_for('index') }}">Biblioteca</a>
+        <nav aria-label="Navegação principal"><a href="{{ url_for('index') }}">Início</a><a href="{{ url_for('formulario_cadastro') }}">Cadastrar</a><a href="{{ url_for('listar_livros') }}">Acervo</a><a href="{{ url_for('sobre') }}">Sobre</a></nav>
+        <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false"><span class="toggle-track" aria-hidden="true"><span></span></span><span class="theme-label">Tema escuro</span></button>
+    </div></header>
+    <main class="page-content">{% block content %}{% endblock %}</main>
+    <footer class="site-footer">Biblioteca virtual · Sistema de gerenciamento de livros</footer>
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='acervo.js') }}"></script>
+</body>
+</html>

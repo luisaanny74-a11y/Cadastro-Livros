@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Início{% endblock %}
+{% block content %}
+<section class="hero"><p class="eyebrow">Gestão de acervo</p><h1>Seus livros organizados em um só lugar.</h1><p class="hero-text">Registre obras, consulte o acervo e mantenha as informações da biblioteca sempre acessíveis.</p><div class="hero-actions"><a class="button" href="{{ url_for('formulario_cadastro') }}">Cadastrar livro</a><a class="button button-secondary" href="{{ url_for('listar_livros') }}">Ver acervo</a></div></section>
+<section class="stat-card" aria-label="Resumo do acervo"><span class="stat-value">{{ total_livros }}</span><div><strong>livros cadastrados</strong><p>disponíveis no acervo virtual</p></div></section>
+{% endblock %}
