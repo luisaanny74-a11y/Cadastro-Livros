@@ -45,9 +45,13 @@ python app.py
 ## Imagens do projeto
 
 ![Página inicial](docs/imagens/inicio.png)
+
 ![Acervo de livros](docs/imagens/acervo.png)
+
 ![Cadastro de livro](docs/imagens/cadastro.png)
+
 ![Gereciamento de Livros](docs/imagens/gereciamento.png)
+
 ![Sobre o Sistema de Livros](docs/imagens/sobre.png)
 
 ## Observação
