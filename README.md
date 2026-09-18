@@ -44,13 +44,9 @@ python app.py
 
 ## Imagens do projeto
 
-Adicione suas capturas de tela na pasta `docs/imagens` antes de enviar o projeto ao GitHub. Depois, substitua os exemplos abaixo pelos nomes reais dos seus arquivos.
-
-```markdown
 ![Página inicial](docs/imagens/inicio.png)
 ![Acervo de livros](docs/imagens/acervo.png)
 ![Cadastro de livro](docs/imagens/cadastro.png)
-```
 
 ## Observação
 
