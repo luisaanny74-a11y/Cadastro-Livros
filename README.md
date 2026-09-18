@@ -44,7 +44,7 @@ python app.py
 
 ## Imagens do projeto
 
-![Página inicial](docs/imagens/inicio.png)
+![Página inicial](docs/imagens/Inicio.png)
 
 ![Acervo de livros](docs/imagens/acervo.png)
 
